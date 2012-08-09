@@ -70,7 +70,7 @@ char *EncodePass::hexchar2bin(const std::string data, int &length)
     const char *data_str;
     data_str = data.c_str();
     memset(buf, 0, length);
-    for (int i = 0; i < data.size(); i = i + 2) {
+    for (unsigned int i = 0; i < data.size(); i = i + 2) {
         char ints[3]= {0};
         memset(ints, 0, sizeof(ints));
         memcpy(ints, data_str + i , 2);
